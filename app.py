@@ -32,6 +32,8 @@ def rename_images_with_prefix_streamlit():
   # Create a Streamlit app.
   st.title('Rename Images with Prefix')
   findpath = st.file_uploader('choose path')
+  system_path=os.getcwd()
+  st.write(f'System_path:{system_path}')
   
 
   # Get the source folder path.
