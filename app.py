@@ -46,7 +46,8 @@ def rename_images_with_prefix_streamlit():
   prefix = st.text_input('Enter a prefix for the new file names')
 
   # Rename and copy the images.
-  rename_images_with_prefix(source_folder_path, destination_folder_path, prefix)
+  if st.button('Rename Images'):
+    rename_images_with_prefix(source_folder_path, destination_folder_path, prefix)
 
   # Display a message to the user.
   st.success('The images have been renamed and copied to the destination folder.')
